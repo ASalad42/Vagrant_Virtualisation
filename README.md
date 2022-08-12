@@ -130,3 +130,13 @@ anytime i have permission issues use `sudo` ie `sudo apt-get install update`
 - `cat filename`
 
 - run provision.sh `./provision.sh`
+
+
+- if errors vagrant destroy, vagrant up, vagrant ssh  
+- update,uprgade, install nginx
+- Install nginx `sudo apt-get install nginx -y`
+- check if install worked `sudo systemctl status nginx `
+- how to restart a process - in this case its an NGINX
+- restart or start `sudo systemctl restart nginx`
+- check status
+- enable the process `sudo systemctl enable nginx`
