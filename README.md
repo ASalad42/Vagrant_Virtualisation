@@ -55,6 +55,8 @@ run `vagrant up` command in terminal where vargrantfile is located
 run `vagrant status`
 # What is DevOps env & benefits 
 ## Vagrant and Virtual box
+![image](https://user-images.githubusercontent.com/104793540/184343497-7f79029b-699d-48df-9ced-f8872dee7fe2.png)
+
 ### Linux & Virtualisation ( + scripting)
 creating linux vim 
 1. run vagrant up 
@@ -118,6 +120,7 @@ can use `sudo` with any command
 - change file permission `chmod +x filename`
 - `r` or `w` or `rw` `all` also numbers `400` or `600` for all `700`
 
+#### Updating and upgrading 
 - update our ubuntu  OS `apt-get install update `
 anytime i have permission issues use `sudo` ie `sudo apt-get install update`
 
@@ -131,9 +134,11 @@ anytime i have permission issues use `sudo` ie `sudo apt-get install update`
 
 - run provision.sh `./provision.sh`
 
-
+#### Solving Errors
 - if errors vagrant destroy, vagrant up, vagrant ssh  
 - update,uprgade, install nginx
+
+#### Installing NGINX
 - Install nginx `sudo apt-get install nginx -y`
 - check if install worked `sudo systemctl status nginx `
 - how to restart a process - in this case its an NGINX
