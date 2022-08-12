@@ -39,7 +39,20 @@ https://www.virtualbox.org/wiki/Downloads
 ![image](https://user-images.githubusercontent.com/104793540/184135055-a9cdd357-e4a0-40ff-8be1-53c7a807ebc1.png)
 
 ### Step 4 - Checking Installations 
+Create a new directory and within it nano Vagrantfile 
+```python 
 
+Vagrant.configure("2") do |config|
+
+ config.vm.box = "ubuntu/xenial64"
+# creating a virtual machine ubuntu 
+
+end
+
+```
+run `vagrant up` command in terminal where vargrantfile is located 
+
+run `vagrant status`
 # What is DevOps env & benefits 
 ## Vagrant and Virtual box
 ### Linux & Virtualisation ( + scripting)
