@@ -145,3 +145,68 @@ anytime i have permission issues use `sudo` ie `sudo apt-get install update`
 - restart or start `sudo systemctl restart nginx`
 - check status
 - enable the process `sudo systemctl enable nginx`
+
+
+##### Adding private network 
+```ruby 
+# Ruby
+
+Vagrant.configure("2") do |config|
+# creating a virtual machine ubuntu 
+    
+ config.vm.box = "ubuntu/xenial64"
+
+ config.vm.network "private_network", ip: "192.168.10.100"
+end
+# once u add pn, you need to reboot VM - vagrant reload 
+# if reload does not work try - vagrant destroy - then vag up
+
+
+```
+
+### Monolith Deployment 
+#### Nodejs - backend tool
+by default Nodejs works on port 3000 
+- Q&A `what are the features of this app`
+- `3 pages` 1 `sparta app page` 2 `fibonacci replacement` 3rd is `192.` for ``mongdob`
+- mongodb default port is `27017` and Mongodb allows you to access - `mongod.conf` you need to allow the requried ip
+- what is nodejs
+-what are dependencies - install nodejs > version 6.0 or above 
+- `sudo apt-get install nodejs -y`
+- which env is needed in order for us to deploy this app 
+- `linux ubuntu 16.04`
+
+##### Setting up
+
+- download app zip 
+- unzip and move folder to where vagrantfile is located 
+- navigate to environtment folder via terminal `cd environment`
+- `cd spec-tests`
+- install bundler `gem install bundler`
+- syncing data from local host 
+```ruby 
+
+# Ruby
+
+Vagrant.configure("2") do |config|
+# creating a virtual machine ubuntu 
+    
+ config.vm.box = "ubuntu/xenial64"
+
+ config.vm.network "private_network", ip: "192.168.10.100"
+ config.vm.synced_folder ".", "/home/vagrant/app" 
+ # sync data from local host 
+end
+# once u add pn, you need to reboot VM - vagrant reload 
+# if reload does not work try - vagrant destroy - then vag up
+
+# syncing our app folder from local host to vm 
+
+
+
+```
+- vagrant reload where the vagrantfile is 
+- vagrant ssh into the vm
+- check contents in app folder `cd app` and `pwd`
+
+
